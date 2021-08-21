@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./admin.css">
+    <title>Document</title>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyBsfT5HXueKcf45vENYRjhIjXLqiDBVOG8",
+    authDomain: "database-d6b02.firebaseapp.com",
+    databaseURL: "https://database-d6b02-default-rtdb.firebaseio.com",
+    projectId: "database-d6b02",
+    storageBucket: "database-d6b02.appspot.com",
+    messagingSenderId: "796963810301",
+    appId: "1:796963810301:web:39d7027ca6b0de445d8794",
+    measurementId: "G-K6N7D18RZL"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <hgroup class="logo span-6">
+         
+            </hgroup>
+            <nav class="session-nav span-6">
+              <ul>
+                <li class="show-menu">
+                  <a href="">menu
+                    <span class="ion-navicon-round"></span>
+                  </a>
+                </li>
+                <li class="account-settings">
+                  <a href="">gsdg
+                    <span class="ion-person"></span>
+                  </a>
+                </li>
+                <li class="logout">
+                  <a href="">logout
+                    <span class="ion-power"></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+        </header>
+      </div>
+    
+    
+      <nav class="application-nav">
+        <div class="container">
+          <ul>
+            <!-- <li class=""><a href=""><span class="ion-home"></span><span class="text">Dashboard</span></a></li> -->
+            <li class=""><a href=""><span class="ion-document-text"></span><span class="text">Pages</span></a></li>
+            <!-- <li class=""><a href=""><span class="ion-android-share-alt"></span><span class="text">Navigation</span></a></li> -->
+            <li class=""><a href=""><span class="ion-person-stalker"></span><span class="text">Users</span></a></li>
+            <li class=""><a href=""><span class="ion-gear-b"></span><span class="text">Website Settings</span></a></li>
+          </ul>
+        </div>
+      </nav>
+    
+    
+      <section id="main-content">
+        <div class="container">
+          <div class="span-12">
+            <nav class="breadcrumb-nav">
+              <a href="#">Dashboard</a> &raquo;
+              <a href="#">Pages</a> &raquo;
+              About Us
+            </nav>
+          </div>
+    
+          <div class="span-6">
+            <div class="panel" >
+              <label class="panel-header" for="page-title">
+            ITEM NAME
+                <span class="hint">The title of the page as displayed by a web browser.</span>
+              </label>
+              <div class="panel-body">
+                <input id="page-title" type="text" value=""  />
+              </div>
+            </div>
+          </div>
+    
+          <div class="span-6">
+            <div class="panel">
+              <label class="panel-header" for="page-url">
+              IMAGES
+                <span class="hint">http://www.example.com/about</span>
+              </label>
+              <div class="panel-body">
+                <input id="page-url" onclick="select()" type="file" src="" name="img" />
+                <label id="upProgress"></label><br> 
+                <!-- <button onclick="upload()"> upload</button> <label id="upProgress"></label><br> -->
+                <!-- <input type="file" name="img" accept="image/*"> -->
+                <!-- image name <input id="namebox" type="text" ><br>
+
+                <img id="myimg"> 
+                  <label id="upProgress"></label><br> 
+<button id="select"> select img</button> -->
+<!-- accept="image/*" value="/about -->
+              </div>
+            </div>
+          </div>
+    
+          <div class="span-12">
+            <div class="panel">
+              <label class="panel-header" for="page-main-content">
+         price
+                <span class="hint">Say something about your company.</span>
+              </label>
+              <div class="panel-body">
+                <div class="wysiwyg">
+                  <span class="fa fa-bold"></span>
+                  <span class="fa fa-italic"></span>
+                  <span class="fa fa-underline"></span>
+                  <span class="fa fa-strikethrough"></span>
+                  <span class="fa fa-list-ul"></span>
+                  <span class="fa fa-list-ol"></span>
+                  <span class="fa fa-link"></span>
+                  <span class="fa fa-image"></span>
+                </div>
+                <textarea id="page-main-content" id="price" ></textarea>
+              </div>
+            </div>
+          </div>
+    
+          <div class="span-12">
+            <div class="panel">
+              <label class="panel-header" for="page-mission-statement">
+              Description
+                <span class="hint">Your company's mission statment.</span>
+              </label>
+              <div class="panel-body">
+                <div class="wysiwyg">
+                  <span class="icon-bold"></span>
+                  <span class="icon-italic"></span>
+                  <span class="icon-underline"></span>
+                  <span class="icon-strikethrough"></span>
+                </div>
+                <textarea id="page-mission-statement"></textarea>
+              </div>
+            </div>
+            <button onclick="save()">save</button>
+          </div>
+        </div>
+       
+      </section>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>

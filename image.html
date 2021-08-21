@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyBsfT5HXueKcf45vENYRjhIjXLqiDBVOG8",
+    authDomain: "database-d6b02.firebaseapp.com",
+    databaseURL: "https://database-d6b02-default-rtdb.firebaseio.com",
+    projectId: "database-d6b02",
+    storageBucket: "database-d6b02.appspot.com",
+    messagingSenderId: "796963810301",
+    appId: "1:796963810301:web:39d7027ca6b0de445d8794",
+    measurementId: "G-K6N7D18RZL"
+  };
+  firebase.initializeApp(firebaseConfig);
+ 
+</script>
+</script>
+</head>
+<body>
+    <!-- <h1 id="data"> </h1>
+    <p id="items"></p> -->
+
+    <style>
+      img{height: 200px; width: 200px; border: 2px solid black;}
+    </style> 
+
+    
+ image name <input id="namebox" type="text" ><br>
+<img id="myimg"> <label id="upProgress"></label><br>
+<button id="select" onclick="select()"> select img</button>
+<button id="upload" onclick="upload()" >upload img</button>
+
+<button id="retrieve" onclick="retrieve()"> retrieve img</button><br><br> 
+ <!-- <button id="file">choose file</button> -->
+<!-- <input type="file" id="file"> -->
+<!-- <button  onclick="send()">send    </button> --> -->
+    <!-- <script src="./app.js"></script> -->
+    <script src="./image.js"></script>
+
+</body>
+</html>
